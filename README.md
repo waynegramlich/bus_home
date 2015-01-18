@@ -43,19 +43,16 @@ The following working modules exists:
   This module is a power distribution board for Bus.  It has an
   On/Off switch and requires two batteries.  There are 6 Ampere
   fuses for each bus.
-  (Status: Works)
   
 * [bus_raspberry_pi](https://github.com/waynegramlich/bus_raspberry_pi):
   This module connects a Rasbperry Pi Model B+ to Bus.
-  (Status: Works)
 
 * [bus_splice](https://github.com/waynegramlich/bus_splice):
   This module provides the ability to splice two 10-wire bus
   cables together.
-  (Status: Works)
 
 * [bus_sonar10](https://github.com/waynegramlich/bus_sonar10):
-  This
+  This module drives up to 10 of the popular HC-SR04 sonar modules.
 
 * [bus_usb_power](https://github.com/waynegramlich/bus_usb_power):
   This module is a power distribution board for Bus with an On/Off
@@ -73,6 +70,12 @@ The following modules are being developed:
   (Status: schematic Done; PCB layout started)
 
 * [bus_grove12](https://github.com/waynegramlich/bus_grove12):
+  This module provides 12 connectors that connect to the
+  [grove system](http://www.seeedstudio.com/wiki/GROVE_System)
+  modules developed by
+  [SeeedStudio](http://www.seeedstudio.com/).
+  The grove system is a family of over a 100 modules with a standard
+  cable connector and some fairly standard mounting holes.
   (Status: waiting for software)
 
 * bus_servoN:
@@ -93,12 +96,11 @@ The following modules are being developed:
   over hundred Click<Sup>&tm;</Sup> boards that plug into the
   mikroBUS connector footprint.  Both mikroBus<Sup>&tm;</Sup>
   and Click<Sup>&tm;</Sup> are trademarked by MicroElectronika.
-  Thus, the board is called "microbus" to avoid trade-mark
-  infringement.
+  Thus, the board is called "microbusN" to avoid trade-mark infringement.
 
 * bus_shield:
   This module is ultimately going to replace the busino module.
-  It will have the defacto standard Arduino<Sup>&tm;</Sup>
+  It will support the defacto standard Arduino<Sup>&tm;</Sup>
   shield connector footprint.
 
 ### Deprecated Modules
@@ -128,8 +130,8 @@ The following modules are deprecated:
     This mini shield provides battery power.
     (Status: Works)
 
-  The board has a lot of connectors
-  and the mini-shields are really too small.
+  This module has a lot of connectors and the mini-shields are really
+  too small.
   (Status: deprecated)
 
 ## Electrical Specifications
