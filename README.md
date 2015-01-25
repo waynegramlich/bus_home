@@ -70,12 +70,12 @@ The following modules are being developed:
   cable connector and some fairly standard mounting holes.
   (Status: waiting for software)
 
-* [bus_servo8]:
+* [bus_servo8](https://github.com/waynegramlich/bus_servo8):
   This module will drive up 8 hobby servos.  It has an on-board
   regulator for 5 volts to power servos at 1.5 Amperes.
   (Status: waiting for PCB's)
 
-* [bus_servo32]:
+* [bus_servo32](https://github.com/waynegramlich/bus_servo32):
   This module will drive up to 32 hobby servos.  It has an on-board
   regulator for 5 volts to power servos at 3 Amperes.
   (Status: schematic mostly done; pcb layout started)
