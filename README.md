@@ -31,7 +31,7 @@ The modules directory is partitioned into 4 catagories:
 
 ### Working Modules
 
-The following working modules exists:
+The following working modules exist:
 
 * [bus_beaglebone](https://github.com/waynegramlich/bus_beaglebone)
   This module connects a BeagleBone Black to Bus.
@@ -54,13 +54,6 @@ The following working modules exists:
 * [bus_sonar10](https://github.com/waynegramlich/bus_sonar10):
   This module drives up to 10 of the popular HC-SR04 sonar modules.
 
-* [bus_usb_power](https://github.com/waynegramlich/bus_usb_power):
-  This module is a power distribution board for Bus.  It can take
-  power in via a batter or via a USB power pack.  Depending upon
-  which DC/DC regulatars are plugged in, it can generate up 2A@5V
-  on a pair of USB power recepticles.  Likewise, it provides
-  power to to the `LPWR` and `BPWR` lines on the bus.
-
 ### Modules Being Developed:
 
 The following modules are being developed:
@@ -77,10 +70,23 @@ The following modules are being developed:
   cable connector and some fairly standard mounting holes.
   (Status: waiting for software)
 
-* bus_servoN:
-  This module will drive up to N hobby servos.  It has an on-board
+* [bus_servo8]:
+  This module will drive up 8 hobby servos.  It has an on-board
+  regulator for 5 volts to power servos at 1.5 Amperes.
+  (Status: waiting for PCB's)
+
+* [bus_servo32]:
+  This module will drive up to 32 hobby servos.  It has an on-board
   regulator for 5 volts to power servos at 3 Amperes.
   (Status: schematic mostly done; pcb layout started)
+
+* [bus_usb_power](https://github.com/waynegramlich/bus_usb_power):
+  This module is a power distribution board for Bus.  It can take
+  power in via a batter or via a USB power pack.  Depending upon
+  which DC/DC regulatars are plugged in, it can generate up 2A@5V
+  on a pair of USB power recepticles.  Likewise, it provides
+  power to to the `LPWR` and `BPWR` lines on the bus.
+  (Status: Rev. A was busted; Rev. B is waiting for PCB's)
 
 ### Modules Not Yet Started
 
@@ -89,17 +95,17 @@ The following modules are being developed:
   as two lines of 16.
 
 * bus_microbusN:
-  This module provides connections for up to N mikroBUS<Sup>&tm;</Sup>
+  This module provides connections for up to N mikroBUS<Sup>&reg;</Sup>
   compatible modules.  mikroBUS is a bus standard developed by
   [MikroElectronika](http://www.mikroe.com/).  MikroElectronika has
-  over hundred Click<Sup>&tm;</Sup> boards that plug into the
-  mikroBUS connector footprint.  Both mikroBus<Sup>&tm;</Sup>
-  and Click<Sup>&tm;</Sup> are trademarked by MicroElectronika.
+  over hundred Click<Sup>&reg;</Sup> boards that plug into the
+  mikroBUS connector footprint.  Both mikroBus<Sup>&reg;</Sup>
+  and Click<Sup>&reg;</Sup> are trademarked by MicroElectronika.
   Thus, the board is called "microbusN" to avoid trade-mark infringement.
 
 * bus_shield:
   This module is ultimately going to replace the busino module.
-  It will support the defacto standard Arduino<Sup>&tm;</Sup>
+  It will support the defacto standard Arduino<Sup>&reg;</Sup>
   shield connector footprint.
 
 ### Deprecated Modules
@@ -108,7 +114,7 @@ The following modules are deprecated:
 
 * [busino](https://github.com/waynegramlich/busino):
   This module is a hybrid design that supports both
-   Arduino<Sup>&tm;</Sup> compatible shields and a up to 4
+   Arduino<Sup>&reg;</Sup> compatible shields and a up to 4
    "mini-shields".  The list of  developed mini-shields are
   listed below:
 
