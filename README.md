@@ -55,12 +55,11 @@ The following working modules exists:
   This module drives up to 10 of the popular HC-SR04 sonar modules.
 
 * [bus_usb_power](https://github.com/waynegramlich/bus_usb_power):
-  This module is a power distribution board for Bus with an On/Off
-  switch.  It has 4 USB power ports to supply a total of 3 Amperes
-  at 5V.  In addition, it allows either dual or single battery
-  configurations.  The single battery configuration requires an
-  additional 6V voltage regulator board.  There are 6 Ampere
-  fuses for each bus.
+  This module is a power distribution board for Bus.  It can take
+  power in via a batter or via a USB power pack.  Depending upon
+  which DC/DC regulatars are plugged in, it can generate up 2A@5V
+  on a pair of USB power recepticles.  Likewise, it provides
+  power to to the `LPWR` and `BPWR` lines on the bus.
 
 ### Modules Being Developed:
 
