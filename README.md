@@ -59,7 +59,7 @@ The following working modules exist:
 The following modules are being developed:
 
 * [bus_battery](https://github.com/waynegramlich/bus_battery):
-  (Status: schematic Done; PCB layout started)
+  (Status: waiting for PCB's)
 
 * [bus_grove12](https://github.com/waynegramlich/bus_grove12):
   This module provides 12 connectors that connect to the
@@ -79,6 +79,10 @@ The following modules are being developed:
   This module will drive up to 32 hobby servos.  It has an on-board
   regulator for 5 volts to power servos at 3 Amperes.
   (Status: schematic mostly done; pcb layout started)
+
+* [bus_splice](https://github.com/waynegramlich/bus_splice):
+  This module is used to splice to bus cables together.
+  (Status: Rev. B is waiting for PCB's)
 
 * [bus_usb_power](https://github.com/waynegramlich/bus_usb_power):
   This module is a power distribution board for Bus.  It can take
