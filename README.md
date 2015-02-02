@@ -80,6 +80,13 @@ The following modules are being developed:
   regulator for 5 volts to power servos at 3 Amperes.
   (Status: schematic mostly done; pcb layout started)
 
+* [bus_shield](https://github.com/waynegramlich/bus_shield):
+  This module is allows you to plug in an Arduino<Sup>&reg;<Sup>
+  compatible shield and talk to it.  The serial pins (D0, D1)
+  are not available to the shield since they are used to talk
+  to the bus.
+  (Status: Rev. A is ready for manufacture.)
+
 * [bus_splice](https://github.com/waynegramlich/bus_splice):
   This module is used to splice to bus cables together.
   (Status: Rev. B is waiting for PCB's)
@@ -94,6 +101,10 @@ The following modules are being developed:
 
 ### Modules Not Yet Started
 
+* bus_dynabus:
+  This module will talk to one of the two Robotis<Sup>&reg;</Sup>
+  Dynamixel<Sup>&reg;</Sup> servo buses like the popular AX12's.
+
 * bus_lcd32:
   This module will provide a 32 character LCD display organized
   as two lines of 16.
@@ -106,11 +117,6 @@ The following modules are being developed:
   mikroBUS connector footprint.  Both mikroBus<Sup>&reg;</Sup>
   and Click<Sup>&reg;</Sup> are trademarked by MicroElectronika.
   Thus, the board is called "microbusN" to avoid trade-mark infringement.
-
-* bus_shield:
-  This module is ultimately going to replace the busino module.
-  It will support the defacto standard Arduino<Sup>&reg;</Sup>
-  shield connector footprint.
 
 ### Deprecated Modules
 
