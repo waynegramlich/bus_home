@@ -38,6 +38,8 @@ The following working modules exist:
   (Status: Works)
 
 * [bus_bridge_encoders_sonar](https://github.com/waynegramlich/bus_bridge_encoders_sonar):
+  This module provides 1) two 1 Ampere H-Bridges to drive two
+  small motors, 2) two wheel encoder inputs, and 3) two HC-SR04 sonars.
 
 * [bus_power](https://github.com/waynegramlich/bus_power):
   This module is a power distribution board for Bus.  It has an
@@ -54,12 +56,24 @@ The following working modules exist:
 * [bus_sonar10](https://github.com/waynegramlich/bus_sonar10):
   This module drives up to 10 of the popular HC-SR04 sonar modules.
 
+* [bus_usb_power](https://github.com/waynegramlich/bus_usb_power):
+  This module is a power distribution board for Bus.  It can take
+  power in via either a batteryp or via a USB power pack.  Depending
+  upon which DC/DC regulatars are plugged in, it can generate up 2A@5V
+  on a pair of USB power recepticles.  Likewise, it provides power
+  to to the `LPWR` and `BPWR` lines on the bus.
+
 ### Modules Being Developed:
 
 The following modules are being developed:
 
 * [bus_battery](https://github.com/waynegramlich/bus_battery):
-  (Status: waiting for PCB's)
+  (Status: waiting firmware)
+
+* bus_dynabus:
+  This module will talk to one of the two Robotis<Sup>&reg;</Sup>
+  Dynamixel<Sup>&reg;</Sup> servo buses like the popular AX12's.
+  (Status: Schematic being worked on.)
 
 * [bus_grove12](https://github.com/waynegramlich/bus_grove12):
   This module provides 12 connectors that connect to the
@@ -68,12 +82,12 @@ The following modules are being developed:
   [SeeedStudio](http://www.seeedstudio.com/).
   The grove system is a family of over a 100 modules with a standard
   cable connector and some fairly standard mounting holes.
-  (Status: waiting for software)
+  (Status: waiting for firmware)
 
 * [bus_servo8](https://github.com/waynegramlich/bus_servo8):
   This module will drive up 8 hobby servos.  It has an on-board
   regulator for 5 volts to power servos at 1.5 Amperes.
-  (Status: waiting for PCB's)
+  (Status: waiting for firmware)
 
 * [bus_servo32](https://github.com/waynegramlich/bus_servo32):
   This module will drive up to 32 hobby servos.  It has an on-board
@@ -81,7 +95,7 @@ The following modules are being developed:
   (Status: schematic mostly done; pcb layout started)
 
 * [bus_shield](https://github.com/waynegramlich/bus_shield):
-  This module is allows you to plug in an Arduino<Sup>&reg;<Sup>
+  This module is allows you to plug in an Arduino<Sup>&reg;</Sup>
   compatible shield and talk to it.  The serial pins (D0, D1)
   are not available to the shield since they are used to talk
   to the bus.
@@ -89,21 +103,13 @@ The following modules are being developed:
 
 * [bus_splice](https://github.com/waynegramlich/bus_splice):
   This module is used to splice to bus cables together.
-  (Status: Rev. B is waiting for PCB's)
-
-* [bus_usb_power](https://github.com/waynegramlich/bus_usb_power):
-  This module is a power distribution board for Bus.  It can take
-  power in via a batter or via a USB power pack.  Depending upon
-  which DC/DC regulatars are plugged in, it can generate up 2A@5V
-  on a pair of USB power recepticles.  Likewise, it provides
-  power to to the `LPWR` and `BPWR` lines on the bus.
-  (Status: Rev. A was busted; Rev. B is waiting for PCB's)
+  (Status: Waiting for assembly; should "just work")
 
 ### Modules Not Yet Started
 
-* bus_dynabus:
-  This module will talk to one of the two Robotis<Sup>&reg;</Sup>
-  Dynamixel<Sup>&reg;</Sup> servo buses like the popular AX12's.
+* bus_imu:
+  This module provides a 3-axis compass, 3-axis gyro, 3-axis
+  accelerometer and a barameter altimeter.
 
 * bus_lcd32:
   This module will provide a 32 character LCD display organized
@@ -117,6 +123,11 @@ The following modules are being developed:
   mikroBUS connector footprint.  Both mikroBus<Sup>&reg;</Sup>
   and Click<Sup>&reg;</Sup> are trademarked by MicroElectronika.
   Thus, the board is called "microbusN" to avoid trade-mark infringement.
+
+* bus_speech:
+  This module provides a text to speech capability using the following
+    [speech chip](http://www.speechchips.com/shop/item.aspx?itemid=22)
+  as its basis.
 
 ### Deprecated Modules
 
