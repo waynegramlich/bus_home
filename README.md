@@ -84,6 +84,16 @@ The following modules are being developed:
   cable connector and some fairly standard mounting holes.
   (Status: waiting for firmware)
 
+* bus_microbus2:
+  [bus_microbus2](https://github.com/waynegramlich/bus_microbus2):
+  This module provides connections for up to 2 mikroBUS<Sup>&reg;</Sup>
+  compatible modules.  mikroBUS is a bus standard developed by
+  [MikroElectronika](http://www.mikroe.com/).  MikroElectronika has
+  over hundred Click<Sup>&reg;</Sup> boards that plug into the
+  mikroBUS connector footprint.  Both mikroBus<Sup>&reg;</Sup>
+  and Click<Sup>&reg;</Sup> are trademarked by MicroElectronika.
+  Thus, the board is called "microbus2" to avoid trade-mark infringement.
+
 * [bus_servo8](https://github.com/waynegramlich/bus_servo8):
   This module will drive up 8 hobby servos.  It has an on-board
   regulator for 5 volts to power servos at 1.5 Amperes.
@@ -114,15 +124,6 @@ The following modules are being developed:
 * bus_lcd32:
   This module will provide a 32 character LCD display organized
   as two lines of 16.
-
-* bus_microbusN:
-  This module provides connections for up to N mikroBUS<Sup>&reg;</Sup>
-  compatible modules.  mikroBUS is a bus standard developed by
-  [MikroElectronika](http://www.mikroe.com/).  MikroElectronika has
-  over hundred Click<Sup>&reg;</Sup> boards that plug into the
-  mikroBUS connector footprint.  Both mikroBus<Sup>&reg;</Sup>
-  and Click<Sup>&reg;</Sup> are trademarked by MicroElectronika.
-  Thus, the board is called "microbusN" to avoid trade-mark infringement.
 
 * bus_speech:
   This module provides a text to speech capability using the following
@@ -379,3 +380,110 @@ damage will occur.
 <BlockQuote>
   *{ More goes here. }*
 </BlockQuote>
+
+## Software Roadmap
+
+ROS Integration:
+
+* Arduino issues:
+
+  * optiboot: We need to support '328 and '324 versions of optiboot.
+    (This is done and works.)  Eventually, we want over the bus
+    firmware upgrade.  This means modifying optiboot to change
+    `putch()` and `getch()` to talk over the bus to `avrdude`.
+
+  * avrdude: It would be nices to have a pseudo-tty that avrdude
+    can talk to so that we run avrdude unmodified to do over the
+    bus firmware upgrades.
+
+  * arduino: I've had to modifiy `HardwareSerial.h` and
+    `HardwareSerial.cpp` in order to replace the uart interrupt
+    routine.  The bus needs 9N1 support whereas the Arduino
+    environment needs 8N1 support.
+
+  * arduino.mk: Figure out how to used the arduino.mk makefile
+    support from inside of a catkin make package.
+
+  * eeprom access: We need to store the bus id and global unique
+    id into the eeprom and access it under program control.
+
+* bus_common:
+
+  * ROS catkin package:  This is the place where all of the common
+    code used for ROS and Arduino land needs to live.  This will
+    be the moral equivalent of `ros_cpp`, but for the bus.
+
+  * arduino.mk: Get dependencies to Arduino.mk figured out.
+    This probably involves some CMake hacking.
+
+  * Bridge protocol: Document the 8N1 <-> 9N1 protocol between
+    the host processor and the bus master (e.g. bus_raspberry_pi
+    or bus_beaglebone.)
+
+  * bus_generate.py: This program reads the module `.xml` file and
+    generates various boiler plate files.  The `.xml` file format
+    needs to be documented.  The `bus_generate.py` needs to be integrated
+    into CMake.  We also need to generate the various files for
+    the ROS `srv` directory.
+
+  * set bus id: Until we have bus_discovery, we need a simpler way of
+    of setting the bus id.
+
+  * bus discovery: The bus discovery protocol needs to be be implemented
+    in both the bus nodes, the bus master, and for ROS.  Yank the
+    discovery documentation from the robus repository.
+
+  * bus sniffer: We need a bus sniffer that can watch traffic on
+    the bus to see what is going on for debugging purposes.
+
+  * ROS bus multiplexer:  This node takes multiple bus requests,
+    prioritizes them, and marshals them to the bus and back.
+    The first version will be written in Python, but eventually
+    this will be written in C++.
+
+  * ROS parameters:  The nodes have parameters.  There needs
+    to be a way to initialize the nodes *and* dynamically change
+    the node parameters after initialization.
+
+* Raspberry Pi 2:
+
+  * Get one:  The Newark RasPi2 back log looks like 286@Feb23, 2700@Mar1,
+    1200@Mar3, 8100@Mar9.  RasPi2(Noob) looks like 2487@Feb19.
+
+  * Install Ubuntu 14.04:
+
+  * Install ROS:
+
+  * Bring up Serial Port:
+
+  * Bring up WiFi:
+
+  * Make sure zeroconf works:
+
+  * Make sure we have a working RasPi camera ROS interface:
+
+* bus_raspberry_pi
+
+  * Catkin package: Make a ROS catkin package that builds everything.
+
+  * Motor Node: Provide a motor control node that responds to the command/velocity
+    topic.
+
+  * Encoder Node: Broadcasts encoder topic
+
+* bus_bridge_encoders_sonar
+
+  * Catkin package: Make a ROS package that builds everything.
+
+* bus_sonar10
+
+  * Catkin package: Make a ROS package that builds everything.
+
+* megera:
+
+  * Catkin meta package for Megara platform:
+
+* fiducials:
+
+  * Get the whole fiducials package working in conjunction with
+    megara.
