@@ -84,8 +84,7 @@ The following modules are being developed:
   cable connector and some fairly standard mounting holes.
   (Status: waiting for firmware)
 
-* bus_microbus2:
-  [bus_microbus2](https://github.com/waynegramlich/bus_microbus2):
+* [bus_microbus2](https://github.com/waynegramlich/bus_microbus2):
   This module provides connections for up to 2 mikroBUS<Sup>&reg;</Sup>
   compatible modules.  mikroBUS is a bus standard developed by
   [MikroElectronika](http://www.mikroe.com/mikrobus).  MikroElectronika has
