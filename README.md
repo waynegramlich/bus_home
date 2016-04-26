@@ -89,7 +89,7 @@ The following modules are being developed:
   This module provides connections for up to 2 mikroBUS<Sup>&reg;</Sup>
   compatible modules.  mikroBUS is a bus standard developed by
   [MikroElectronika](http://www.mikroe.com/mikrobus).  MikroElectronika has
-  over hundred [Click](http://www.mikroe.com/mikrobus) boards that plug
+  over 100 [Click](http://www.mikroe.com/click) boards that plug
   into the mikroBUS connector footprint.  Both mikroBus<Sup>&reg;</Sup>
   and Click<Sup>&reg;</Sup> are trademarked by MicroElectronika.
   Thus, the board is called "microbus2" to avoid trade-mark infringement.
