@@ -88,9 +88,9 @@ The following modules are being developed:
   [bus_microbus2](https://github.com/waynegramlich/bus_microbus2):
   This module provides connections for up to 2 mikroBUS<Sup>&reg;</Sup>
   compatible modules.  mikroBUS is a bus standard developed by
-  [MikroElectronika](http://www.mikroe.com/).  MikroElectronika has
-  over hundred Click<Sup>&reg;</Sup> boards that plug into the
-  mikroBUS connector footprint.  Both mikroBus<Sup>&reg;</Sup>
+  [MikroElectronika](http://www.mikroe.com/mikrobus).  MikroElectronika has
+  over hundred [Click](http://www.mikroe.com/mikrobus) boards that plug
+  into the mikroBUS connector footprint.  Both mikroBus<Sup>&reg;</Sup>
   and Click<Sup>&reg;</Sup> are trademarked by MicroElectronika.
   Thus, the board is called "microbus2" to avoid trade-mark infringement.
 
